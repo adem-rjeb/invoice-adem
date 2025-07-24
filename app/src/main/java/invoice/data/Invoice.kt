@@ -1,4 +1,4 @@
-package com.msjtech.invoice
+package invoice.data
 
 data class Invoice(
     val id: String,

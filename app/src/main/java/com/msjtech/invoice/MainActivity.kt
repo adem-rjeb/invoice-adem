@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 
 import com.msjtech.invoice.ui.theme.InvoiceTheme
 
+import invoice.data.Invoice
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
@@ -42,26 +43,16 @@ class MainActivity : ComponentActivity() {
                     paymentMethod = "CB"
 
                 )
-                val azer = Invoice(
-                    id = "Invoice-2025-001",
-                    company = "MsjRide",
-                    fromPlace = "Place rrr1",
-                    toPlace = "Place 2",
-                    date = "14/0llllll7/2025",
-                    totalHt = 10.0,
-                    taxRate = 0.1,
-                    customer = "azer",
-                    nbKilometre = 5.3,
-                    paymentMethod = "CB"
 
-                )
 
                 }
-
             }
         }
     }
 }
+
+
+
 
 @Composable
 fun InvoiceItem(invoice: Invoice, modifier: Modifier = Modifier) {
@@ -69,14 +60,14 @@ fun InvoiceItem(invoice: Invoice, modifier: Modifier = Modifier) {
 
     Card(
         modifier = modifier
-            .padding(top = 30.dp  )
+            .padding(top = 30.dp)
 
 
             .fillMaxWidth(),
          RoundedCornerShape(16.dp),
         elevation = CardDefaults.cardElevation(6.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color.LightGray// light grey background
+            containerColor = Color.LightGray
         )
     ){
     Column(
